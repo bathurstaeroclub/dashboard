@@ -1,0 +1,56 @@
+body {
+	font-family: Tahoma, Helvetica, Arial;
+	font-size: 14px;
+}
+
+input,
+select,
+submit,
+button {
+	font-family: Tahoma;
+	Helvetica,
+	Arial;
+	font-size: 13px;
+}
+
+input {
+	font-weight: bold;
+}
+
+input#input-heading {
+	text-align: center;
+}
+
+canvas#plan {
+	border: 1px solid #030;
+	background: #ddf0dd;
+}
+
+canvas.instrumentX {
+	border: 1px solid #000;
+	background: #111;
+}
+
+div#form {
+	clear: both;
+	width: 480px;
+	text-align: center;
+}
+
+div.section {
+	background: #eee;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	margin: 6px 5px;
+	width: 134px;
+	float: left;
+}
+
+div.section.left {
+	margin-left: 11px;
+}
+
+div.section.right {
+	margin-right: 11px;
+}
