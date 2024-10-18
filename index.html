@@ -4,13 +4,29 @@
 		<meta charset="utf-8">
 		<title>VOR Simulator</title>
 		<link rel="stylesheet" type="text/css" href="css/vor.css">
+		<!-- Flight Indicators library styles -->
+		<link rel="stylesheet" type="text/css" href="css/flightindicators.css" />
 	</head>
 
 	<body>
+		<!-- Importing jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<!-- Importing the FlightIndicators library -->
+		<script src="js/jquery.flightindicators.js"></script>
+
 		<div id="field" style="float: left">
 			<canvas id="plan" width="480" height="480"></canvas>
 		</div>
-		<div id="indicator" style="float: left;">
+		<!-- XXX
+			FIXME: organise sixpack layout.
+		-->
+		<div id="sixpack">
+			<span id="airspeed"></span>
+			<span id="attitude"></span>
+			<span id="altimeter"></span>
+			<span id="turn_coordinator"></span>
+			<span id="heading"></span>
+			<span id="variometer"></span>
 			<canvas id="vor1" class="instrument" width="200" height="200"></canvas>
 		</div>
 
@@ -32,6 +48,12 @@
 			</div>
 		</div>
 
+		<!-- Importing jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<!-- Importing the FlightIndicators library -->
+		<script src="js/jquery.flightindicators.js"></script>
+
+		<script type="text/javascript" src="js/sixpack.js"></script>
 		<script type="text/javascript" src="js/vor.js"></script>
 	</body>
 </html>

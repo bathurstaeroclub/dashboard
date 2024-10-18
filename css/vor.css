@@ -31,6 +31,10 @@ canvas.instrumentX {
 	background: #111;
 }
 
+div.sixpack {
+    display: block;
+}
+
 div#form {
 	clear: both;
 	width: 480px;
