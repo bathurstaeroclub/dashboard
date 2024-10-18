@@ -17,16 +17,19 @@
 		<div id="field" style="float: left">
 			<canvas id="plan" width="480" height="480"></canvas>
 		</div>
-		<!-- XXX
-			FIXME: organise sixpack layout.
-		-->
-		<div id="sixpack">
-			<span id="airspeed"></span>
-			<span id="attitude"></span>
-			<span id="altimeter"></span>
-			<span id="turn_coordinator"></span>
-			<span id="heading"></span>
-			<span id="variometer"></span>
+		<div class="sixpack">
+			<div class="row">
+				<span class="col1" id="airspeed"></span>
+				<span class="col2" id="attitude"></span>
+				<span class="col3" id="altimeter"></span>
+			</div>
+			<div class="row">
+				<span class="col1" id="turn_coordinator"></span>
+				<span class="col2" id="heading"></span>
+				<span class="col3" id="variometer"></span>
+			</div>
+		</div>
+		<div class="nav">
 			<canvas id="vor1" class="instrument" width="200" height="200"></canvas>
 		</div>
 

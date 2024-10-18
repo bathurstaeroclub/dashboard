@@ -31,8 +31,25 @@ canvas.instrumentX {
 	background: #111;
 }
 
-div.sixpack {
-    display: block;
+.sixpack {
+	padding: 10px;
+	margin: 0 auto;
+	display: inline-block;
+	vertical-align: top;
+}
+.nav {
+	padding: 10px;
+	margin: 0 auto;
+	display: inline-block;
+	vertical-align: top;
+}
+.row {
+	width: 100%;
+}
+.col1,.col2,.col3 {
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px;
 }
 
 div#form {
