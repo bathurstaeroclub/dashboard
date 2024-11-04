@@ -1,0 +1,7 @@
+div.comms {
+  width: 450px;
+  height: 250px;
+  position: relative;
+  display: inline-block;
+  object-fit: contain;
+}
