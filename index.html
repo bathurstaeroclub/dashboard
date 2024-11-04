@@ -54,18 +54,12 @@
 
 		<div class="comms">
 			<p id="audio-title"></p>
-			<img src="img/kx155.svg" style="width: 100%;max-height: 100%" />
+			<img id="kx155" src="img/kx155.svg" style="width: 100%;max-height: 100%" />
 			<audio id="ctaf-audio" controls autoplay crossorigin="https://dashboard.bathurstaeroclub.com.au">
 			<source src="https://bac-ctaf-srv.bathurstaeroclub.com.au/ybthctaf.ogg" type="audio/ogg" />
 			<!-- fallback for non-supporting browsers goes here -->
 			<p>Your browser does not support HTML audio.</p>
 			</audio>
-			<script type="text/javascript">
-				$.getJSON('https://bac-ctaf-srv.bathurstaeroclub.com.au/status-json.xsl', function(data) {
-					console.log(data);
-					document.getElementById("audio-title").innerHTML = data.icestats.source.title;
-				});
-			</script>
 		</div>
 
 		<!-- Importing jQuery library -->
@@ -75,5 +69,6 @@
 
 		<script type="text/javascript" src="js/sixpack.js"></script>
 		<script type="text/javascript" src="js/vor.js"></script>
+		<script type="text/javascript" src="js/kx155.js"></script>
 	</body>
 </html>
