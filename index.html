@@ -51,11 +51,20 @@
 			</div>
 		</div>
 
+		<p id="audio-title"></p>
 		<audio id="ctaf-audio" controls autoplay crossorigin="https://dashboard.bathurstaeroclub.com.au">
 		<source src="https://bac-ctaf-srv.bathurstaeroclub.com.au/ybthctaf.ogg" type="audio/ogg" />
 		<!-- fallback for non-supporting browsers goes here -->
 		<p>Your browser does not support HTML audio.</p>
 		</audio>
+		<script type="text/javascript">
+			$.getJSON('https://bac-ctaf-srv.bathurstaeroclub.com.au/status-json.xsl', function(data) {
+				console.log(data);
+				document.getElementById("audio-title").innerHTML = data.icestats.source.title;
+			});
+		</script>
+		<!--
+		-->
 
 		<!-- Importing jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
