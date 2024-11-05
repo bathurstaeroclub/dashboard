@@ -1,17 +1,20 @@
-$("#kx155.vol-off").on("click", function() {
+$("#kx155 .vol-off").on("click", function() {
 	console.log("Volume");
 });
-$("#kx155.pull-25k").on("click", function() {
+$("#kx155 .pull-25k").on("click", function() {
 	console.log("Pull 25K");
 });
-$("#kx155.pull-ident").on("click", function() {
+$("#kx155 .nav-knob").on("click", function() {
+	console.log("Nav Knob");
+});
+$("#kx155 .pull-ident").on("click", function() {
 	console.log("Pull Ident");
 });
 
-$("#kx155.toggle-comm-freq").on("click", function() {
+$("#kx155 .toggle-comm-freq").on("click", function() {
 	console.log("Toggling Comm Freq");
 });
-$("#kx155.toggle-nav-freq").on("click", function() {
+$("#kx155 .toggle-nav-freq").on("click", function() {
 	console.log("Toggling Nav Freq");
 });
 
