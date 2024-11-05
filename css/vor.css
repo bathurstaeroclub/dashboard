@@ -8,7 +8,7 @@ input,
 select,
 submit,
 button {
-	font-family: Tahoma;
+	font-family: Tahoma,
 	Helvetica,
 	Arial;
 	font-size: 13px;
