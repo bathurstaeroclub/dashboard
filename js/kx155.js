@@ -34,11 +34,35 @@ svgObj.on("load", () => {
 	$(".pull-25k", svg).on("click", () => {
 		console.log("Pull 25K");
 	});
+	$(".pull-25k", svg).on("wheel", (e) => {
+		e.preventDefault();
+		console.log("Pull-25K scrolling..");
+		var delta = Math.max(-1, Math.min(1, e.originalEvent.deltaY));
+
+		if (delta ==  1 ) {console.log("Pull-25K up");}
+		if (delta == -1 ) {console.log("Pull-25K down");}
+	});
 	$(".nav-knob", svg).on("click", () => {
 		console.log("Nav Knob");
 	});
+	$(".nav-knob", svg).on("wheel", (e) => {
+		e.preventDefault();
+		console.log("Nav Knob scrolling..");
+		var delta = Math.max(-1, Math.min(1, e.originalEvent.deltaY));
+
+		if (delta ==  1 ) {console.log("Nav up");}
+		if (delta == -1 ) {console.log("Nav down");}
+	});
 	$(".pull-ident", svg).on("click", () => {
 		console.log("Pull Ident");
+	});
+	$(".pull-ident", svg).on("wheel", (e) => {
+		e.preventDefault();
+		console.log("Pull-Ident Knob scrolling..");
+		var delta = Math.max(-1, Math.min(1, e.originalEvent.deltaY));
+
+		if (delta ==  1 ) {console.log("Ident up");}
+		if (delta == -1 ) {console.log("Ident down");}
 	});
 
 	$(".toggle-comm-freq", svg).on("click", () => {
