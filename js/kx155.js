@@ -7,7 +7,7 @@ const audio_title = document.getElementById("audio-title");
 
 const svgObj = $("#kx155");
 
-svgObj.on("load", () => {
+svgObj.on("load", (evt) => {
 	console.log("kx155 svg loaded.");
 	const svg = svgObj[0].contentDocument;
 	//console.log( svg );
