@@ -1,3 +1,5 @@
+"use strict;"
+
 const audio = document.querySelector("audio");
 audio.removeAttribute('controls');
 
