@@ -12,14 +12,23 @@ svgObj.on("load", () => {
 
 	let isPlaying = false;
 
-	$("svg .vol-off", svg).on("click", () => {
-		console.log("Volume");
+	$(".vol-off", svg).on("click", () => {
 		if (isPlaying) {
+			console.log("Volume Off");
 			audio.pause();
 		} else {
+			console.log("Volume On");
 			audio.play();
 		}
 		isPlaying = !isPlaying;
+	});
+	$(".vol-off", svg).on("wheel", (e) => {
+		e.preventDefault();
+		//console.log("Volume scrolling..");
+		var delta = Math.max(-1, Math.min(1, e.originalEvent.deltaY));
+
+		if (delta ==  1 && audio.volume <= 0.9) {console.log("V up");audio.volume+=0.1;}
+		if (delta == -1 && audio.volume  > 0.1) {console.log("V down");audio.volume-=0.1;}
 	});
 
 	$(".pull-25k", svg).on("click", () => {
