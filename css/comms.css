@@ -8,29 +8,4 @@
 .comms #kx155 {
   width: 100%;
   max-height: 100%;
-
-  .comm-display:hover { fill: #94d31b; }
-  .nav-display:hover { fill: #94d31b; }
-
-  .pull-25k {
-    transform-origin: center center;
-    transform: rotate(0deg);
-  }
-  .pull-25k:hover {
-    fill: #94d31b;
-    transform-origin: center center;
-    transform: rotate(-45deg);
-  }
-  .nav-knob:hover {
-    fill: #94d31b;
-  }
-  .vol-off:hover {
-     fill: #94d31b;
-  }
-  .pull-ident:hover {
-     fill: #94d31b;
-  }
-
-  .toggle-comm-freq:hover { fill: #94d31b; }
-  .toggle-nav-freq:hover { fill: #94d31b; }
 }

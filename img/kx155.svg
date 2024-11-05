@@ -5,6 +5,35 @@
  width="1440.000000pt" height="753.000000pt" viewBox="0 0 1440.000000 753.000000"
  preserveAspectRatio="xMidYMid meet">
 
+<style>
+<![CDATA[
+  .comm-display:hover { fill: #94d31b; }
+  .nav-display:hover { fill: #94d31b; }
+
+  .pull-25k {
+    transform-origin: center center;
+    transform: rotate(0deg);
+  }
+  .pull-25k:hover {
+    fill: #94d31b;
+    transform-origin: center center;
+    transform: rotate(-45deg);
+  }
+  .nav-knob:hover {
+    fill: #94d31b;
+  }
+  .vol-off:hover {
+     fill: #94d31b;
+  }
+  .pull-ident:hover {
+     fill: #94d31b;
+  }
+
+  .toggle-comm-freq:hover { fill: #94d31b; }
+  .toggle-nav-freq:hover { fill: #94d31b; }
+]]>
+</style>
+
 <g transform="translate(0.000000,753.000000) scale(0.100000,-0.100000)"
 fill="#000000" stroke="none">
 <path class="face" d="M708 6001 c-97 -3 -180 -9 -183 -13 -4 -4 -11 -47 -16 -96 -9 -91 -8
