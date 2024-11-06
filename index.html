@@ -28,8 +28,17 @@
 		<div class="nav">
 			<canvas id="vor1" class="instrument" width="200" height="200"></canvas>
 		</div>
+		<div class="comms">
+			<p id="audio-title"></p>
+			<audio controls crossorigin="https://dashboard.bathurstaeroclub.com.au">
+				<source src="https://bac-ctaf-srv.bathurstaeroclub.com.au/ybthctaf.ogg" type="audio/ogg" />
+				<!-- fallback for non-supporting browsers goes here -->
+				<p>Your browser does not support HTML audio.</p>
+			</audio>
+			<object id="kx155" type="image/svg+xml" data="img/kx155.svg"> </object>
+		</div>
 
-		<div id="form">
+		<div id="form" style="float: left">
 			<div>Aircraft Settings</div>
 			<div class="section left">
 				Heading<br>
@@ -45,16 +54,6 @@
 				Visibility<br>
 				<button onclick="sim.hideAirplane();">Hide</button><button onclick="sim.showAirplane();">Show</button>
 			</div>
-		</div>
-
-		<div class="comms">
-			<p id="audio-title"></p>
-			<audio controls crossorigin="https://dashboard.bathurstaeroclub.com.au">
-				<source src="https://bac-ctaf-srv.bathurstaeroclub.com.au/ybthctaf.ogg" type="audio/ogg" />
-				<!-- fallback for non-supporting browsers goes here -->
-				<p>Your browser does not support HTML audio.</p>
-			</audio>
-			<object id="kx155" type="image/svg+xml" data="img/kx155.svg"> </object>
 		</div>
 
 		<!-- Importing jQuery library -->
