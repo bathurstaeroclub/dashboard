@@ -5,11 +5,12 @@ audio.removeAttribute('controls');
 
 const audio_title = document.getElementById("audio-title");
 
-const svgObj = $("#kx155");
+const svgObj = document.getElementById("kx155");
 
-svgObj.on("load", (evt) => {
+// https://stackoverflow.com/questions/66868356/firefox-add-on-window-addeventlistener-load-init-not-firing-event
+window.addEventListener("pageshow", (evt) => {
 	console.log("kx155 svg loaded.");
-	const svg = svgObj[0].contentDocument;
+	const svg = svgObj.contentDocument;
 	//console.log( svg );
 
 	let isPlaying = false;
