@@ -16,12 +16,16 @@ window.addEventListener("pageshow", (evt) => {
 	let isPlaying = false;
 
 	$(".vol-off", svg).on("click", () => {
+		$(".vol-off", svg)[0].style.transformBox = 'fill-box';
+		$(".vol-off", svg)[0].style.transformOrigin = 'center';
 		if (isPlaying) {
 			console.log("Volume Off");
 			audio.pause();
+			$(".vol-off", svg)[0].style.transform = 'rotate(-70deg)';
 		} else {
 			console.log("Volume On");
 			audio.play();
+			$(".vol-off", svg)[0].style.transform = 'rotate(70deg)';
 		}
 		isPlaying = !isPlaying;
 	});
