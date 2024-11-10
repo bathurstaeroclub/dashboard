@@ -31,6 +31,18 @@
 
   .toggle-comm-freq:hover { fill: #94d31b; }
   .toggle-nav-freq:hover { fill: #94d31b; }
+
+
+svg {
+	font-family: 'Russo One', sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	text-transform: uppercase;
+	stroke-width: 2;
+	stroke: #f03c16;
+	font-size: 45px;
+}
 ]]>
 </style>
 
@@ -197,6 +209,8 @@ m-3284 -45 c0 -35 4 -69 9 -77 15 -23 31 21 31 83 0 43 3 56 15 56 12 0 15
 -20 -20 0 -13 7 -20 20 -20 11 0 20 -7 20 -15 0 -8 -9 -15 -20 -15 -13 0 -20
 -7 -20 -20 0 -15 7 -20 26 -20 40 0 23 -25 -19 -28 l-37 -3 0 85 0 86 35 0
 c24 0 35 -5 35 -15z"/>
+<path id="comm_display0" d="M 110,250 L 350,250"/>
+<path id="comm_display1" d="M 410,250 L 650,250"/>
 <path d="M4987 4534 c-8 -8 1 -24 14 -24 5 0 9 7 9 15 0 15 -12 20 -23 9z"/>
 <path d="M4990 4455 c0 -17 5 -25 13 -22 6 2 12 12 12 22 0 10 -6 20 -12 23
 -8 2 -13 -6 -13 -23z"/>
@@ -289,4 +303,14 @@ l-33 3 -3 74 c-2 41 -1 80 2 88 7 18 60 17 76 -2z m76 -17 l17 -33 9 33 c5 18
 <path d="M8897 2344 c-12 -13 -7 -80 7 -100 22 -29 38 -5 34 52 -2 34 -8 50
 -18 52 -9 1 -19 0 -23 -4z"/>
 </g>
+	<text x="50%" y="50%" text-anchor="start">
+		x
+		<textPath id="comm_freq0" href="#comm_display0">
+		1 2 7 3 5 0
+		</textPath>
+		y
+		<textPath id="comm_freq1" href="#comm_display1">
+		1 3 3 2 5 0
+		</textPath>
+	</text>
 </svg>
