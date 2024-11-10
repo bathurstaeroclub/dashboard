@@ -102,12 +102,14 @@ window.addEventListener("pageshow", (evt) => {
 	$(".toggle-comm-freq", svg).on("click", () => {
 		console.log("Toggling Comm Freq");
 		if (isCommFreq) {
-			$("#comm_freq0", svg)[0].textContent = "1 3 3 2 5 0";
-			$("#comm_freq1", svg)[0].textContent = "1 2 7 3 5 0";
+			s1 = $("#comm_freq0", svg)[0].textContent;
+			s0 = $("#comm_freq1", svg)[0].textContent;
 		} else {
-			$("#comm_freq0", svg)[0].textContent = "1 2 7 3 5 0";
-			$("#comm_freq1", svg)[0].textContent = "1 3 3 2 5 0";
+			s0 = $("#comm_freq0", svg)[0].textContent;
+			s1 = $("#comm_freq1", svg)[0].textContent;
 		}
+		$("#comm_freq0", svg)[0].textContent = s0;
+		$("#comm_freq1", svg)[0].textContent = s1;
 		isCommFreq = !isCommFreq;
 	});
 	$(".toggle-nav-freq", svg).on("click", () => {
