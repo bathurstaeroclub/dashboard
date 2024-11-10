@@ -22,10 +22,14 @@ window.addEventListener("pageshow", (evt) => {
 			console.log("Volume Off");
 			audio.pause();
 			$(".vol-off", svg)[0].style.transform = 'rotate(-70deg)';
+			$("#comm_freq0", svg)[0].textContent = "";
+			$("#comm_freq1", svg)[0].textContent = "";
 		} else {
 			console.log("Volume On");
 			audio.play();
 			$(".vol-off", svg)[0].style.transform = 'rotate(70deg)';
+			$("#comm_freq0", svg)[0].textContent = "1 2 7 3 5 0";
+			$("#comm_freq1", svg)[0].textContent = "1 3 3 2 5 0";
 		}
 		isPlaying = !isPlaying;
 	});
@@ -72,8 +76,17 @@ window.addEventListener("pageshow", (evt) => {
 		if (delta == -1 ) {console.log("Ident down");}
 	});
 
+	let isCommFreq = false;
 	$(".toggle-comm-freq", svg).on("click", () => {
 		console.log("Toggling Comm Freq");
+		if (isCommFreq) {
+			$("#comm_freq0", svg)[0].textContent = "1 3 3 2 5 0";
+			$("#comm_freq1", svg)[0].textContent = "1 2 7 3 5 0";
+		} else {
+			$("#comm_freq0", svg)[0].textContent = "1 2 7 3 5 0";
+			$("#comm_freq1", svg)[0].textContent = "1 3 3 2 5 0";
+		}
+		isCommFreq = !isCommFreq;
 	});
 	$(".toggle-nav-freq", svg).on("click", () => {
 		console.log("Toggling Nav Freq");
