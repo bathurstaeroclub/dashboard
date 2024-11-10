@@ -28,8 +28,8 @@ window.addEventListener("pageshow", (evt) => {
 			console.log("Volume On");
 			audio.play();
 			$(".vol-off", svg)[0].style.transform = 'rotate(70deg)';
-			$("#comm_freq0", svg)[0].textContent = "1 2 7 3 5 0";
-			$("#comm_freq1", svg)[0].textContent = "1 3 3 2 5 0";
+			$("#comm_freq0", svg)[0].textContent = "1 2 7 . 3 5";
+			$("#comm_freq1", svg)[0].textContent = "1 3 3 . 2 5";
 		}
 		isPlaying = !isPlaying;
 	});
@@ -58,22 +58,22 @@ window.addEventListener("pageshow", (evt) => {
 		if (delta ==  1 ) {
 			console.log("Pull-25K up");
 			if (isPull25k) {
-				i = i + 25000;
+				i = i + 0.25;
 			} else {
-				i = i + 25;
+				i = i + 1.25;
 			}
-			if (i > 136995) { i = 118000; } // Wrap, VHF band is 118kHz - 136.995kHz.
+			if (i > 136.995) { i = 118.000; } // Wrap, VHF band is 118kHz - 136.995kHz.
 		}
 		if (delta == -1 ) {
 			console.log("Pull-25K down");
 			if (isPull25k) {
-				i = i - 25000;
+				i = i - 0.25;
 			} else {
-				i = i - 25;
+				i = i - 1.25;
 			}
-			if (i < 118000) { i = 136995; } // Wrap, VHF band is 118kHz - 136.995kHz.
+			if (i < 118.000) { i = 136.995; } // Wrap, VHF band is 118kHz - 136.995kHz.
 		}
-		$("#comm_freq1", svg)[0].textContent = i.toString().split('').join(' ');
+		$("#comm_freq1", svg)[0].textContent = i.toFixed(3).toString().split('').join(' ');
 	});
 	$(".nav-knob", svg).on("click", () => {
 		console.log("Nav Knob");
