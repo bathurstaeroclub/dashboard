@@ -75,19 +75,48 @@ window.addEventListener("pageshow", (evt) => {
 		}
 		$("#comm_freq1", svg)[0].textContent = i.toFixed(3).toString().split('').join(' ');
 	});
+	let isNavKnob = false;
 	$(".nav-knob", svg).on("click", () => {
 		console.log("Nav Knob");
+		isNavKnob = !isNavKnob;
 	});
 	$(".nav-knob", svg).on("wheel", (e) => {
 		e.preventDefault();
 		console.log("Nav Knob scrolling..");
 		var delta = Math.max(-1, Math.min(1, e.originalEvent.deltaY));
 
-		if (delta ==  1 ) {console.log("Nav up");}
-		if (delta == -1 ) {console.log("Nav down");}
+		let nav_freq1 = $("#nav_freq1", svg)[0].textContent;
+		let i = parseInt(comm_freq1.replace(/\s+/gm,''));
+
+		if (delta ==  1 ) {
+			console.log("Nav up");
+			if (isNavKnob) {
+				i = i + 0.05;
+			} else {
+				i = i + 1.05;
+			}
+			if (i > 117.950) { i = 108.000; } // Wrap, VHF band is 108kHz - 117.950MHz (50kHz spacing).
+		}
+		if (delta == -1 ) {
+			console.log("Nav down");
+			if (isNavKnob) {
+				i = i - 0.05;
+			} else {
+				i = i - 1.05;
+			}
+			if (i < 108.000) { i = 117.950; } // Wrap, VHF band is 108kHz - 117.950MHz (50kHz spacing).
+		}
+		$("#nav_freq1", svg)[0].textContent = i.toFixed(3).toString().split('').join(' ');
 	});
+	let isNavIdentPulled = false;
 	$(".pull-ident", svg).on("click", () => {
 		console.log("Pull Ident");
+		if (!isPlaying) {
+			if (!isNavIdentPulled) {
+				alert("Listening to NAV Ident");
+			} else {alert("Ident Tone Attenuated");}
+		}
+		isNavIdentPulled = !isNavIdentPulled;
 	});
 	$(".pull-ident", svg).on("wheel", (e) => {
 		e.preventDefault();
@@ -112,8 +141,19 @@ window.addEventListener("pageshow", (evt) => {
 		$("#comm_freq1", svg)[0].textContent = s1;
 		isCommFreq = !isCommFreq;
 	});
+	let isNavFreq = false;
 	$(".toggle-nav-freq", svg).on("click", () => {
 		console.log("Toggling Nav Freq");
+		if (isNavFreq) {
+			s1 = $("#nav_freq0", svg)[0].textContent;
+			s0 = $("#nav_freq1", svg)[0].textContent;
+		} else {
+			s0 = $("#nav_freq0", svg)[0].textContent;
+			s1 = $("#nav_freq1", svg)[0].textContent;
+		}
+		$("#nav_freq0", svg)[0].textContent = s0;
+		$("#nav_freq1", svg)[0].textContent = s1;
+		isNavFreq = !isNavFreq;
 	});
 
 	$.getJSON('https://bac-ctaf-srv.bathurstaeroclub.com.au/status-json.xsl', (data) => {
