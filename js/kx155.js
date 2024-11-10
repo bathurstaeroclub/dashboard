@@ -62,7 +62,7 @@ window.addEventListener("pageshow", (evt) => {
 			} else {
 				i = i + 25;
 			}
-			if (i > 136995) { i = 136995; } // VHF band is 118kHz - 136.995kHz.
+			if (i > 136995) { i = 118000; } // Wrap, VHF band is 118kHz - 136.995kHz.
 		}
 		if (delta == -1 ) {
 			console.log("Pull-25K down");
@@ -71,7 +71,7 @@ window.addEventListener("pageshow", (evt) => {
 			} else {
 				i = i - 25;
 			}
-			if (i < 118000) { i = 118000; } // VHF band is 118kHz - 136.995kHz.
+			if (i < 118000) { i = 136995; } // Wrap, VHF band is 118kHz - 136.995kHz.
 		}
 		$("#comm_freq1", svg)[0].textContent = i.toString().split('').join(' ');
 	});
