@@ -115,12 +115,12 @@ window.addEventListener("pageshow", (evt) => {
 	let isNavIdentPulled = false;
 	$(".pull-ident", svg).on("click", () => {
 		console.log("Pull Ident");
-		if (!isPlaying) {
+		if (isPlaying) {
 			if (!isNavIdentPulled) {
 				alert("Listening to NAV Ident");
 			} else {alert("Ident Tone Attenuated");}
+			isNavIdentPulled = !isNavIdentPulled;
 		}
-		isNavIdentPulled = !isNavIdentPulled;
 	});
 	$(".pull-ident", svg).on("wheel", (e) => {
 		e.preventDefault();
