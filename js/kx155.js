@@ -62,18 +62,18 @@ window.addEventListener("pageshow", (evt) => {
 		if (delta ==  1 ) {
 			console.log("Pull-25K up");
 			if (isPull25k) {
-				i = i + 0.25;
+				i = i + 0.50;
 			} else {
-				i = i + 1.25;
+				i = i + 0.25;
 			}
 			if (i > 136.995) { i = 118.000; } // Wrap, VHF band is 118kHz - 136.995kHz.
 		}
 		if (delta == -1 ) {
 			console.log("Pull-25K down");
 			if (isPull25k) {
-				i = i - 0.25;
+				i = i - 0.50;
 			} else {
-				i = i - 1.25;
+				i = i - 0.25;
 			}
 			if (i < 118.000) { i = 136.995; } // Wrap, VHF band is 118kHz - 136.995kHz.
 		}
