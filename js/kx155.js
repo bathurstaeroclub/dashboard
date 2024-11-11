@@ -90,7 +90,7 @@ window.addEventListener("pageshow", (evt) => {
 		var delta = Math.max(-1, Math.min(1, e.originalEvent.deltaY));
 
 		let nav_freq1 = $("#nav_freq1", svg)[0].textContent;
-		let i = parseInt(comm_freq1.replace(/\s+/gm,''));
+		let i = parseInt(nav_freq1.replace(/\s+/gm,''));
 
 		if (delta ==  1 ) {
 			console.log("Nav up");
