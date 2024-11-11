@@ -1,5 +1,7 @@
 "use strict;"
 
+//import { playYBTH } from 'js/nav.js';
+
 const audio = document.querySelector("audio");
 audio.removeAttribute('controls');
 
@@ -118,7 +120,8 @@ window.addEventListener("pageshow", (evt) => {
 		if (isPlaying) {
 			if (!isNavIdentPulled) {
 				alert("Listening to NAV Ident");
-			} else {alert("Ident Tone Attenuated");}
+				playYBTH(true);
+			} else {alert("Ident Tone Attenuated");playYBTH(false);}
 			isNavIdentPulled = !isNavIdentPulled;
 		}
 	});
