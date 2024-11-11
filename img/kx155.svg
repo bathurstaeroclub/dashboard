@@ -310,9 +310,7 @@ l-33 3 -3 74 c-2 41 -1 80 2 88 7 18 60 17 76 -2z m76 -17 l17 -33 9 33 c5 18
 		<textPath id="comm_freq0" href="#comm_display0"></textPath>
 		y
 		<textPath id="comm_freq1" href="#comm_display1"></textPath>
-		x
 		<textPath id="nav_freq0" href="#nav_display0"></textPath>
-		y
 		<textPath id="nav_freq1" href="#nav_display1"></textPath>
 	</text>
 </svg>
