@@ -24,12 +24,16 @@ window.addEventListener("pageshow", (evt) => {
 			$(".vol-off", svg)[0].style.transform = 'rotate(-70deg)';
 			$("#comm_freq0", svg)[0].textContent = "";
 			$("#comm_freq1", svg)[0].textContent = "";
+			$("#nav_freq0", svg)[0].textContent = "";
+			$("#nav_freq1", svg)[0].textContent = "";
 		} else {
 			console.log("Volume On");
 			audio.play();
 			$(".vol-off", svg)[0].style.transform = 'rotate(70deg)';
 			$("#comm_freq0", svg)[0].textContent = "1 2 7 . 3 5";
 			$("#comm_freq1", svg)[0].textContent = "1 3 3 . 2 5";
+			$("#nav_freq0", svg)[0].textContent = "1 0 8 . 0 0";
+			$("#nav_freq1", svg)[0].textContent = "1 1 7 . 9 5";
 		}
 		isPlaying = !isPlaying;
 	});
