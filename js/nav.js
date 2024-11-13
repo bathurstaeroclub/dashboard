@@ -69,9 +69,12 @@ async function playLetter(letter) {
   }
 }
 
+let playIdent = false;
+
 // Word is an array of letters as Morse code, like ['.', '.-', '-']
 async function playWord(word) {
   for (let i = 0; i < word.length; i++) {
+    if (!playIdent) { break; } // Stop playing when Ident knob is pulled
     await playLetter(word[i]);
     await sleep(LETTER_BREAK);
   }
@@ -84,7 +87,6 @@ async function playSentence(sentence) {
   }
 }
 
-let playIdent = false;
 async function playYBTH(identToggle) {
   playIdent = identToggle;
   try {
